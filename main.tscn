@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://nsstcxof8hbq"]
+
+[ext_resource type="PackedScene" uid="uid://c25t0oum5icpo" path="res://bar.tscn" id="1_338ya"]
+[ext_resource type="Script" path="res://main.gd" id="1_vh44f"]
+[ext_resource type="PackedScene" uid="uid://b3lko8m280het" path="res://puck.tscn" id="2_bdwr3"]
+[ext_resource type="Script" path="res://puck.gd" id="3_rvtuy"]
+[ext_resource type="Script" path="res://player.gd" id="5_q85ci"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vh44f")
+
+[node name="Bar" parent="." instance=ExtResource("1_338ya")]
+position = Vector2(572, 24)
+scale = Vector2(4, 1)
+
+[node name="Bar2" parent="." instance=ExtResource("1_338ya")]
+position = Vector2(577, 620)
+scale = Vector2(4, 1)
+
+[node name="Bar3" parent="." instance=ExtResource("1_338ya")]
+position = Vector2(6, 324)
+rotation = 1.5708
+scale = Vector2(2, 1)
+
+[node name="Bar4" parent="." instance=ExtResource("1_338ya")]
+position = Vector2(1149, 324)
+rotation = 1.5708
+scale = Vector2(2, 1)
+
+[node name="Puck" parent="." instance=ExtResource("2_bdwr3")]
+position = Vector2(138, 77)
+script = ExtResource("3_rvtuy")
+
+[node name="Player" parent="." instance=ExtResource("1_338ya")]
+position = Vector2(80, 115)
+rotation = 1.5708
+scale = Vector2(0.5, 2)
+script = ExtResource("5_q85ci")
